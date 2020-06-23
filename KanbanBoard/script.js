@@ -95,6 +95,7 @@ function createNewCard(){
         newCard.innerHTML = `<div class="status ${statusColor.value}"></div><div class="content">${cardContentText.value}</div>`;
         dropzoneToAdd.appendChild(newCard);
         atualizaCards();
+        cardContentText.value = "";
         closeModalAdd();
     }
 }
