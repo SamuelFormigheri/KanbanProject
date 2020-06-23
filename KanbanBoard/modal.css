@@ -1,0 +1,109 @@
+#modal{
+    background-color: #2a2c31ef;
+    height:100vh;
+    width: 100vw;
+    position:fixed;
+    top:0;
+    right:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition:400ms;
+}
+
+#modal.hide{
+    display: none;
+}
+
+#modal .content{
+   color:white;
+   width: 30vw;
+}
+
+#modal .header{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2vh ;
+}
+
+#modal .header a{
+    background-image: url("x.svg");
+    width: 20px;
+    height: 20px;
+    display: flex;
+    font-size: 0.01px;
+    opacity: 0.9;
+}
+
+#modal .header h1{
+    color:white;
+    font-size: 36px;
+    line-height: 42px;
+    opacity: 0.9;
+}
+
+#modal .content .data div{
+    display:flex;
+    flex-direction: column;
+}
+
+#modal .content .data div textarea{
+    background-color: white;
+    opacity:0.8;
+    border:1px solid;
+    padding: 12px 18px;
+    height: 150px;
+    box-sizing: border-box;
+    font-size:14px;
+    border-radius: 8px;
+    margin-bottom:2vh;
+    width: 100%;
+}
+
+#modal .content .data div select{
+    background-color: white;
+    opacity:0.8;
+    border:1px solid;
+    padding: 12px 18px;
+    font-size:14px;
+    border-radius: 8px;
+    margin-bottom:2vh;
+    width: 100%;
+}
+
+.redOption{
+    color:red;
+}
+.greenOption{
+    color: #23d2ac;
+}
+.blueOption{
+    color: #33adff;
+}
+
+#modal .content .data div label{
+    opacity:0.8;
+    font-size:18px;
+    margin-bottom:1vh;
+    font-weight:500;
+}
+
+#modal .content button{
+    width: 100%;
+    height: 40px;
+    background-color: #46bb46;
+    color:white;
+    font-weight: bold;
+    font-size:16px;
+    border:0;
+    border-radius:10px;
+    transition:400ms;
+    flex:1;
+    align-items: center;
+}
+
+#modal .content button:hover{
+    background-color: #269258;
+}
