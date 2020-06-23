@@ -3,6 +3,7 @@ KanbanProject
 </h1>
 
 <p align="center">Project developed for studying porpuses.</p>
+<p>You can create Cards and use the Drag and Drop feature.</p>
 
 <hr>
 
