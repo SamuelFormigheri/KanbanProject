@@ -4,6 +4,7 @@ KanbanProject
 
 <p align="center">Project developed for studying porpuses.</p>
 <p align="center">You can create Cards and use the Drag and Drop feature.</p>
+<p align="center">It was developed only the front-end.</p>
 
 <hr>
 
@@ -20,6 +21,10 @@ This project was developed with the following technologies:
 - [x] CSS
 
 - [x] HTML
+
+## Usage
+
+Just open with live server in Visual Studio Code.<br />
 
 ## Participants
 
