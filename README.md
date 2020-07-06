@@ -30,11 +30,11 @@ This project was developed with the following technologies:
 
 ## Usage
 
-Install Node Package Manager - NPM -> npm install npm@latest -g
-Install Express -> npm install express --save
-Install Nodemon -> npm install -g nodemon
-Install Nunjucks -> npm install nunjucks
-Install SQLite -> npm install sqlite3<br />
+Install Node Package Manager - NPM -> npm install npm@latest -g <br />
+Install Express -> npm install express --save <br />
+Install Nodemon -> npm install -g nodemon <br />
+Install Nunjucks -> npm install nunjucks <br />
+Install SQLite -> npm install sqlite3 <br />
 
 ## Participants
 
