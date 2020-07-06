@@ -22,9 +22,19 @@ This project was developed with the following technologies:
 
 - [x] HTML
 
+- [x] Node
+
+- [x] Express
+
+- [x] SQLite
+
 ## Usage
 
-Just open with live server in Visual Studio Code.<br />
+Install Node Package Manager - NPM -> npm install npm@latest -g
+Install Express -> npm install express --save
+Install Nodemon -> npm install -g nodemon
+Install Nunjucks -> npm install nunjucks
+Install SQLite -> npm install sqlite3<br />
 
 ## Participants
 
