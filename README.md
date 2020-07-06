@@ -4,7 +4,7 @@ KanbanProject
 
 <p align="center">Project developed for studying porpuses.</p>
 <p align="center">You can create Cards and use the Drag and Drop feature.</p>
-<p align="center">It was developed only the front-end.</p>
+<p align="center">All the features are saving on the backend.</p>
 
 <hr>
 
