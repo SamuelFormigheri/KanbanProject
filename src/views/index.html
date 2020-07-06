@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban Board</title>
+
+    <link href="/styles/style.css" rel="stylesheet"/>
+    <link href="/styles/modal.css" rel="stylesheet"/>
+    <link href="/styles/modalRemove.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;700&display=swap" rel="stylesheet">
+</head>
+<body class="imgFundo">
+    <div class="header"> 
+        <h1>Kanban Board</h1>
+        <span id="dragToDeleteCard">Drag Here to delete the Card</span>
+    </div>      
+    <div class="boards">
+        <div class="board">
+            <h3>Backlog<span class="plus">+</span></h3>
+            <div class="dropzone">
+                {% for item in cards %}
+                    {% if item.status == 'backlog' %}
+                        <div class="card" draggable="true" data = {{ item.id }}>
+                            <div class="status {{ item.colorTag }}"></div>
+                            <div class="content">{{ item.content }}</div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="board">
+            <h3>To Do<span class="plus">+</span></h3>
+            <div class="dropzone">
+                {% for item in cards %}
+                    {% if item.status == 'toDo' %}
+                        <div class="card" draggable="true" data = {{ item.id }}>
+                            <div class="status {{ item.colorTag }}"></div>
+                            <div class="content">{{ item.content }}</div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="board">
+            <h3>In progress<span class="plus">+</span></h3>
+            <div class="dropzone">
+                {% for item in cards %}
+                    {% if item.status == 'inProgress' %}
+                        <div class="card" draggable="true" data = {{ item.id }}>
+                            <div class="status {{ item.colorTag }}"></div>
+                            <div class="content">{{ item.content }}</div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="board">
+            <h3>Done<span class="plus">+</span></h3>
+            <div class="dropzone">
+                {% for item in cards %}
+                    {% if item.status == 'done' %}
+                        <div class="card" draggable="true" data = {{ item.id }}>
+                            <div class="status {{ item.colorTag }}"></div>
+                            <div class="content">{{ item.content }}</div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <!-- ------Modal for Add new Cards-----  -->
+    <div id="modal" class="hide">
+        <div class="content">
+            <div class="header">
+                <h1>Create new Card</h1>
+                <a href="#" id="closeModal">Close</a>
+            </div>
+            <div class="data">
+                <div>
+                    <label>Status Color:</label>
+                    <select id="statusColor">
+                        <option class="redOption" value="red">Red</option>
+                        <option class="greenOption" value="green">Green</option>
+                        <option class="blueOption" value="blue">Blue</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Card Text:</label>
+                    <textarea type = "text" id="cardContentText" name="cardContentText"></textarea>
+                </div>
+            </div>
+            <button id="btnAddConfirm">Confirm</button>
+        </div>
+    </div>
+    <!-- ----------------------------------- -->
+     <!-- ------Modal for Remove Cards-----  -->
+    <div id="modalRemove" class="hide">
+        <div class="content">
+            <div class="header">
+                <h1>Remove Card</h1> 
+                <a href="#" id="closeModalRemove">Close</a>          
+            </div>
+            <div class="data">
+                <div>
+                    <label>Are you sure you want to remove the card?</label>
+                </div>
+            </div>
+            <button id="btnConfirmRemove">Confirm</button>
+        </div>
+    </div>
+    <!-- ----------------------------------- -->
+    <script src="/scripts/script.js" defer></script>
+</body>
+</html>
